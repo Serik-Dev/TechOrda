@@ -45,3 +45,5 @@ P.S.
 - Красивый вывод логов `git log --all --decorate --oneline --graph`
 
 [Рецензия](./REVIEW.md)
+
+8434e9c286418a67a3b309c52f842ae3ccae6977
