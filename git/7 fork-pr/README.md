@@ -32,3 +32,4 @@ fork - это клонирование чужого репозитория на 
 ```bash
 curl -s https://stepik.org:443/api/course-lists\?page\=1 | jq --raw-output '."course-lists"[].title'
 ```
+7339b9033930b2d46e03fd46468a3b32f7b432df
