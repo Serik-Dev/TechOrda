@@ -46,3 +46,6 @@ git checkout authorization
 
 5. Загрузите изменения `git push`
 6. Прислать ссылку на репозиторий c указанием последнего коммита мастера в URL.
+   9ec55a76e71535fc5fc88af9ffd69d66329b3eaa
+   e1bf8f4b44bf5a40109caf61b8dcc0e92fcffdf1
+   d1953cd85b105d5f346e2ffb86a0fbf5cc3072d9
