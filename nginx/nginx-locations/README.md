@@ -25,13 +25,40 @@ curl -H "Host: example.com" http://localhost:8080/
 ---
 
 ### Ответ
-<html>
-<head><title>403 Forbidden</title></head>
-<body>
-<center><h1>403 Forbidden</h1></center>
-<hr><center>nginx/1.18.0 (Ubuntu)</center>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
 
-403 Forbidden
-nginx/1.18.0 (Ubuntu)
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Page</title>
+</head>
+
+<body>
+    <p>
+    <h1>Cat with Flower</h1>
+    <img src="/images/flower.png" alt="flower">
+    </p>
+
+    <p>
+    <h1>Cat with Glasses</h1>
+    <img src="/images/glasses.png" alt="glasses">
+    </p>
+
+    <p>
+    <h1>Gray Cat</h1>
+    <img src="/images/gray-animal.jpeg" alt="gray-animal">
+    </p>
+
+    <p>
+    <h1>Cats mafia</h1>
+    <img src="/images/mafia.png" alt="mafia">
+    </p>
+
+    <p>
+    <h1>Sleepy Cat</h1>
+    <img src="/images/sleep.png" alt="sleep">
+    </p>
+</body>
+
