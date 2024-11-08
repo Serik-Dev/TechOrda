@@ -61,5 +61,23 @@ curl -H "Host: example.com" http://localhost:8080/
     <h1>Sleepy Cat</h1>
     <img src="/images/sleep.png" alt="sleep">
     </p>
+   
+    <p>
+    <h1>dancing</h1>
+    <img src="/gifs/dancing.gif" alt="sleep">
+    </p>
+     
+    <p>
+    <h1>jam</h1>
+    <img src="/gifs/jam.gif" alt="sleep">
+    </p>
+ 
+    <p>
+    <h1>sad</h1>
+    <img src="/gifs/sad.gif" alt="sleep">
+    </p>
+		
 </body>
+
+</html>
 ```
