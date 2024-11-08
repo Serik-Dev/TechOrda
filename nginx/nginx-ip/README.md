@@ -22,3 +22,21 @@
 ---
 
 ### Ответ
+```
+server {
+    listen 8083;
+    server_name example.com;
+
+    # Блок location /secret_word
+    location /secret_word {
+        return 203 'jusan-nginx-ip';
+        add_header Content-Type text/plain;
+
+        # Разрешаем доступ для диапазона 192.0.0.1/20, но блокируем 192.0.0.1
+        allow 192.168.0.1/24;
+        deny 192.0.0.2;
+	deny 192.168.0.103;
+        deny all;
+    }
+}
+```
