@@ -10,3 +10,30 @@
 6. Учетка `design` не должна иметь доступ на другие пути, тоже самое касается других учеток.
 
 ---
+```
+server {
+    listen 8082;
+    server_name example.com;
+
+    # Обслуживание файла index.html на пути /
+    location / {
+        root /var/www/html/nginx-location;  # Замените на путь к каталогу с файлом index.html
+        index index.html;
+    }
+
+    # Обслуживание файлов из /images
+    location /images {
+        alias /var/www/html/nginx-location/images;  # Замените на путь к извлеченному содержимому cats.zip
+    	auth_basic "Password access /images";
+	auth_basic_user_file /etc/nginx/conf.d/passwd_desing;
+    }
+
+    # Обслуживание файлов из /gifs
+    location /gifs {
+        alias /var/www/html/nginx-location/gifs;  # Замените на путь к извлеченному содержимому gifs.zip
+    	auth_basic "Password access /images";
+	auth_basic_user_file /etc/nginx/conf.d/passwd_marketing;
+    }
+		
+}
+```
