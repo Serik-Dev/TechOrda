@@ -81,3 +81,33 @@ curl -H "Host: example.com" http://localhost:8080/
 
 </html>
 ```
+```
+server {
+    listen 8085;
+    server_name example.com;
+
+    # Обслуживание файла index.html на пути /
+    location /api {
+        alias /var/www/html/nginx-location;  # Замените на путь к каталогу с файлом index.html
+        index index.html;
+    }
+
+    # Обслуживание файлов из /images
+    location /images {
+        alias /var/www/html/nginx-location/images;  # Замените на путь к извлеченному содержимому cats.zip
+    }
+
+    # Обслуживание файлов из /gifs
+    location /gifs {
+        alias /var/www/html/nginx-location/gifs;  # Замените на путь к извлеченному содержимому gifs.zip
+    }
+
+    # Возвращение строки jusan-nginx-locations на пути /secret_word со статусом 201
+    location /secret_word {
+        return 201 'jusan-nginx-locations';
+        add_header Content-Type text/plain;
+    }
+		
+}
+
+```
