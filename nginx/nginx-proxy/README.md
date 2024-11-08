@@ -35,3 +35,26 @@ web-server: 0
 ---
 
 ### Ответ
+### Использовал свои сервера ссылка localhost:8085/api/ перенаправляет на localhost:89 без префикса api
+server {
+    listen 89;
+    server_name localhost;
+
+    # Обслуживание файла index.html на пути /
+    location / {
+        root /var/www/html/nginx-proxy/;  # Укажите путь к каталогу, где находится index.html
+        index index.html;
+    }
+
+    # Проксирование запросов к API
+# Проксирование запросов к API, удаляя префикс /api
+    location /api/ {
+        rewrite ^/api(.*)$ /$1 break;
+        proxy_pass http://localhost:8085/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
