@@ -25,6 +25,7 @@ curl -H "Host: example.com" http://localhost:8080/
 ---
 
 ### Ответ
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,4 +62,4 @@ curl -H "Host: example.com" http://localhost:8080/
     <img src="/images/sleep.png" alt="sleep">
     </p>
 </body>
-
+```
