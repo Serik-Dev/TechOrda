@@ -20,3 +20,20 @@
 ---
 
 ### Ответ
+```
+sudo apt-get update -y
+
+sudo apt-get install nginx ufw -y
+
+sudo ufw allow 'Nginx Full'
+
+или
+
+sudo ufw allow 80
+
+sudo ufw allow 443
+
+sudo ufw enable
+
+sudo ufw status numbered
+```
