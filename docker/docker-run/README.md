@@ -54,4 +54,4 @@ bash ./tester.sh
 ---
 
 ### Ответ
-
+https://github.com/Serik-Dev/docker-run/commit/c5c22d6f189c6ef891e9f43a7162a7e1aa833689
